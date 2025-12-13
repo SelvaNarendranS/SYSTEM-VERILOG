@@ -8,7 +8,7 @@ module pass_by_name;
     
     $display("Received 2value to function value1, value2 = %0d, %0d", value1, value2);
     
-    return ((a == b) ? "EQUAL" : "NOT EQUAL");				// returning the passed argument value 
+    return ((a == b) ? "EQUAL" : "NOT EQUAL");				// global variable access and conditional statement 
     
   endfunction
   
@@ -30,4 +30,5 @@ module pass_by_name;
     $display("pass by name => sent --- a = %0d | b = %0d - returned value from function = %0s", a, b, rn_value);
   end
 endmodule
+
     
