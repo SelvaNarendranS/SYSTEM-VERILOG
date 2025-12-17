@@ -3,11 +3,10 @@ module automatic_function;
   int count;
   
   function automatic int behaviour(int a);
-    int value;
-    value = 1;
-    $display("In function The value = %0d | the count = %0d", value, a);
+    int value = 1;
     value++;
     a++;
+    $display("In function The value = %0d | the count = %0d", value, a);
   endfunction
   
   initial begin
