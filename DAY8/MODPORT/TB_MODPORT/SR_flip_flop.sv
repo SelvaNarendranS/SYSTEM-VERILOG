@@ -9,9 +9,9 @@ module sr_ff(intf.dut intff);	// interface instance --- getting port list as arg
     else begin
       case({intff.s, intff.r})
         2'b00 : intff.q <= intff.q;		// no change
-        2'b01 : intff.q <= 0;			// reset
-        2'b10 : intff.q <= 1;			// set
-        2'b11 : intff.q <= 1'bx;		// not defined
+        2'b01 : intff.q <= 0;			    // reset
+        2'b10 : intff.q <= 1;			    // set
+        2'b11 : intff.q <= 1'bx;		  // not defined
       endcase
     end
   end
