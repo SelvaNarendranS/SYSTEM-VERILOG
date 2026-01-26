@@ -2,8 +2,8 @@
 // interface
 
 interface intf #(parameter WIDTH = 8);
-  logic 			rst;
-  logic 			en;
+  logic 			      rst;
+  logic 			      en;
   logic [WIDTH-1:0] data_in;
   logic [WIDTH-1:0] b2g;
   logic [WIDTH-1:0] g2b;
@@ -30,4 +30,5 @@ interface intf #(parameter WIDTH = 8);
   modport dut(input rst, en, data_in, output b2g, g2b); // design
   modport tb(output rst, en, data_in, input b2g, g2b, import reset, drive_data);	// testbench -- need to import task to the testbench modport
   
+
 endinterface
