@@ -15,4 +15,3 @@ module dff(
   
   assign q_bar = ~q;
 endmodule
-  
