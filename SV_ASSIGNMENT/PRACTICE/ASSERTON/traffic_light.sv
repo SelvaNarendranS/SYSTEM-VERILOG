@@ -136,11 +136,21 @@ module way2_signal(
     (((east_signal[2] == 1'b1) && (west_signal[2] == 1'b1))[*32]);
   endproperty
     
-    assert property(light_mov)
-      $display("traffic signal : passed");
+  assert property(light_mov)
+    $display("traffic signal : passed");
   else
     $error("traffic Signal : failed");
 
+
+   property walk_disable_if;
+    @(posedge clk) disable iff (rst)
+    (state == GREEN) |-> (walk_n2s == 1'b0);
+  endproperty
+    
+  assert property(walk_disable_if)
+    $display("walk_disabled : Passed");
+  else
+    $display("walk_disabled : Failed");
 endmodule
 
 
